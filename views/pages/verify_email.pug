@@ -1,0 +1,45 @@
+extends ../layout
+
+block main
+    .main
+        // Sign in  Form
+        section.sign-in
+            .container
+                .signin-content
+                    .signin-image
+                        figure
+                            img(src='../img/giphy.gif', alt='loading image')
+                        //- a.signup-image-link(href='/signup') Create an account
+                    .signin-form#data(data-message=alertMessage data-title=alertTitle data-type=alertType data-timer=alertTimer)
+                        form#login-form.register-form.validate-form(method='POST' , action='/verify_email')
+                            if alertMessage
+                                script.
+                                    Swal.fire({
+                                        title: document.querySelector('#data').getAttribute('data-title'),
+                                        text: document.querySelector('#data').getAttribute('data-message'),
+                                        type: document.querySelector('#data').getAttribute('data-type'),
+                                        timer: document.querySelector('#data').getAttribute('data-timer'),
+                                        showConfirmButton: false,
+                                    });
+                                    if(document.querySelector('#data').getAttribute('data-type') === 'success' ) {
+                                        setTimeout(function() {
+                                            location.assign('/login')
+                                        },3000)
+                                    }
+                        h2.form-title(style="padding-top:10%") Verifing Email
+                            //- .form-group
+                            //-     .wrap-input100.validate-input(data-validate='Field is required')
+                                    //- label(for='secretToken')
+                                    //- .btn.btn-default.btn-lg(style="background-color:transparent;padding-left:30%")
+                                    //-     i.zmdi.zmdi-rotate-right.zmdi-hc-spin.zmdi-hc-5x
+                                    //- input#your_pass.input100(type='text', name='secretToken', placeholder='Enter verication code')
+                            //- .form-group
+                            //-     input#remember-me.agree-term(type='checkbox', name='remember-me')
+                            //-     label.label-agree-term(for='remember-me')
+                            //-         span
+                            //-             span 
+                            //- .form-group.form-button
+                            //-     input#signin.form-submit(type='submit', value='verify')
+    script(src='/js/jquery-3.2.1.min.js')
+    //- script(src='/js/validate.js')
+    //- script(src='/js/validate2.js')

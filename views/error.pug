@@ -1,0 +1,10 @@
+extends ./layout
+
+block main
+  .d-flex.flex-row.align-items-center(style="margin-top: 15%;")
+    .container
+      .row.justify-content-center
+        .col-md-12.text-center
+          span.display-1.d-block 404
+          .mb-4.lead.alert.alert-danger= error.message
+          //- a.btn.btn-link(href='https://www.totoprayogo.com/#') Back to Home

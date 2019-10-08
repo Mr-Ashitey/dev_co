@@ -1,0 +1,79 @@
+extends ../layout
+
+block main
+    .main
+        nav.navbar.navbar-default
+            .container-fluid
+                .navbar-header(style='padding-left: 10px')
+                    a(href='/')
+                        button.btn.btn-secondary.btn-lg.navbar-btn.pull-left
+                            span.i.zmdi.zmdi-chevron-left
+                    .navbar-text.navbar-brand-centered
+                        h5 Go Back
+        // Sign up form
+        section.signup
+            .container
+                .signup-content
+                    .signup-form
+                        h2.form-title#data(data-message=alertMessage data-title=alertTitle data-type=alertType data-adminType=adminType) Sign up
+                        form#register-form.register-form.login100-form.validate-form(action="/signup" method="POST")
+                            if alertMessage
+                                script.
+                                    Swal.fire({
+                                        title: document.querySelector('#data').getAttribute('data-title'),
+                                        text: document.querySelector('#data').getAttribute('data-message'),
+                                        type: document.querySelector('#data').getAttribute('data-type'),
+                                        //- timer: 3500
+                                    });
+                                    //- if(document.querySelector('#data').getAttribute('data-type') === 'success' ) {
+                                    //-     setTimeout(function() {
+                                    //-         location.assign('/verify_email')
+                                    //-     },3000)
+                                    //- }
+                            .form-group
+                                .wrap-input100.validate-input(data-validate='Name is required')
+                                    label(for='name')
+                                        i.zmdi.zmdi-account.material-icons-name
+                                    input#nameField.input100(type='text', name='name', placeholder='Your Name')
+                                span#nameFieldMsg
+                            .form-group
+                                .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+                                    label(for='email')
+                                        i.zmdi.zmdi-email
+                                    input#emailField.input100(type='text', name='email', placeholder='Your Email')
+                                span#emailFieldMsg
+                            .form-group
+                                .wrap-input100.validate-input(data-validate='Password is required')
+                                    label(for='password')
+                                        i.zmdi.zmdi-lock
+                                    input#password.input100(type='password', name='password', placeholder='Password')
+                                span#requiredPassword
+                            .form-group
+                                .wrap-input100.validate-input(data-validate='Confirm Password is required')
+                                    label(for='re-pass')
+                                        i.zmdi.zmdi-lock-outline
+                                    input#confirmPassword.input100(type='password', name='confirmPassword', placeholder='Repeat your password')
+                                span#passwordMatchMsg
+                            .form-group
+                                    input#agree-term.agree-term(type='checkbox', name='agree-term')
+                                    label.label-agree-term(for='agree-term')
+                                        span
+                                    a.term-service(href='#') Terms of service
+                            .form-group.form-button
+                                input#signup.form-submit(type='submit', value='Register')
+                    .signup-image
+                        figure
+                            img(src='../img/signup-image.jpg', alt='sign up image')
+                        a.signup-image-link(href='/login') I am already a member
+    script(src='/js/jquery-3.2.1.min.js')
+    //- script(src='/js/validate.js')
+    script(src='/js/validate2.js')
+    //- script.
+    //-     window.onload = function() {
+    //-         Swal.fire({
+    //-             type: 'success',
+    //-             title: 'Well Validated Signup Page',
+    //-             text: 'Try our signup page by entering your details.',
+    //-             footer: '<p style="color:red;">Your Information is Safe</p>'
+    //-         })
+    //-     };
