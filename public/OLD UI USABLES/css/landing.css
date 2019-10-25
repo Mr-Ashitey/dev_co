@@ -33,7 +33,7 @@ header.masthead {
     position: relative;
     background-color: #343a40;
     height: 100vh;
-    background: url(/img/dev_co.png) no-repeat fixed center center;
+    background: url(https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80) no-repeat fixed center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -132,7 +132,7 @@ img.img-fluid.rounded-circle.mb-3 {
 
 .mybg {
     position: relative;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7686274509803922), rgba(255, 255, 255, 0.7686274509803922)), url(/img/dev_co.png) no-repeat center center fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7686274509803922), rgba(255, 255, 255, 0.7686274509803922)), url(https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=707&q=80) no-repeat center center fixed;
     background-size: cover;
 }
 

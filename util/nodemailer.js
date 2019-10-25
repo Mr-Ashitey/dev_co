@@ -7,8 +7,8 @@
 //     port:587,
 //     secure: false,
 //     auth: {
-//            user: 'madcodein@gmail.com',
-//            pass: 'Emma@2000'
+//            user: '****@****.****',
+//            pass: '*******'
 //        }
 //    });
 
