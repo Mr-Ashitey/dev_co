@@ -44,8 +44,8 @@ app.set("views", "views");
 app.use(express.static(path.join(__dirname, "public")));
 
 //Use routes
-app.use(require("./routes/AuthRoute"));
-app.use(require("./routes/HomeRoute"));
+app.use(require("./routes/WorksRoute"));
+app.use(require("./routes/PagesRoute"));
 // app.use(require("./routes/routes"));
 
 //404 handler

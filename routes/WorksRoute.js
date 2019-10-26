@@ -23,7 +23,7 @@ const transporter = nodemailer.createTransport({
 
 //render signup page
 router.get("/signup", (req, res) => {
-  res.render("pages/signup");
+  res.render("works/signup/signup");
 });
 
 //process signup page
@@ -55,7 +55,7 @@ router.post("/signup", async (req, res) => {
   const foundUser = await Users.findOne({ email });
   //if User already exists return error alert
   if (foundUser) {
-    return res.render("pages/signup", {
+    return res.render("works/signup/signup", {
       alertTitle: "Signup Error",
       alertMessage: `The email "${email}" already exists`,
       alertType: "error"
@@ -90,7 +90,7 @@ router.post("/signup", async (req, res) => {
     if (err) {
       console.log(err);
       // res.status(401).send({ success: false });
-      return res.render('pages/signup',{
+      return res.render('works/signup/signup',{
         alertTitle: "Signup Error",
         alertMessage: `Seems there is a problem in sending you an email. Please check your connection and try again`,
         alertType: "info"
@@ -101,7 +101,7 @@ router.post("/signup", async (req, res) => {
       // save newUser detail into the database
       await newUser.save();
       
-      res.render('pages/signup',{
+      res.render('works/signup/signup',{
         alertTitle: "Signup Successful",
         alertMessage: `We have sent you a verification link at "${email}". Please verify account`,
         alertType: "success"
@@ -118,7 +118,7 @@ router.post("/signup", async (req, res) => {
 
 //render login page
 router.get("/login", (req, res) => {
-  res.render("pages/login");
+  res.render("works/login/login");
 });
 
 //process login page
@@ -136,7 +136,7 @@ router.post("/login", async (req, res, next) => {
 
     //if User does not exist return error alert
     if (!User) {
-      return res.render("pages/login", {
+      return res.render("works/login/login", {
         alertTitle: "Login Error",
         alertMessage: `No user exists with the email "${email}"`,
         alertType: "error",
@@ -149,7 +149,7 @@ router.post("/login", async (req, res, next) => {
 
     //if they don't match, return error alert
     if (!matching) {
-      return res.render("pages/login", {
+      return res.render("works/login/login", {
         alertTitle: "Login Error",
         alertMessage: "Incorrect Password",
         alertType: "error",
@@ -159,14 +159,14 @@ router.post("/login", async (req, res, next) => {
 
     //if user account is not verified by email
     if (!User.active) {
-      return res.render("pages/login", {
+      return res.render("works/login/login", {
         alertTitle: "Error",
         alertMessage: "You need to verify email first.",
         alertType: "error"
       });
     }
 
-    return res.render("pages/login", {
+    return res.render("works/login/login", {
       alertMessage: "Successfully logged in to your account",
       alertType: "success",
       alertTimer: 1500
@@ -180,7 +180,7 @@ router.get("/verify_email/:id", async (req, res, next) => {
   try {
     const user = await Users.findOne({ secretToken: req.params.id });
     if (!user) {
-      return res.render("pages/verify_email", {
+      return res.render("works/verify_email", {
         alertType: "Error",
         alertMessage: "Invalid Verification Code",
         alertType: "error",
@@ -194,7 +194,7 @@ router.get("/verify_email/:id", async (req, res, next) => {
     await user.save();
     
     console.log(user)
-    return res.render("pages/verify_email", {
+    return res.render("works/verify_email", {
       alertMessage: "Verification Successful",
       alertType: "success",
       alertTimer: 1500

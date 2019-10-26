@@ -1,0 +1,5 @@
+change the url for the WorksRoute 
+eg: change from /signup to /works/signup
+
+also got to 'about-login' and 'about-signup' pages and change the '/signup' to '/works/signup'
+a(href='/signup') https://techdev.herokuapp/works/signup

@@ -11,13 +11,66 @@ head
     link(rel='stylesheet', href='css/owl.carousel.min.css')
     link(rel='stylesheet', href='css/owl.theme.default.min.css')
     link(rel='stylesheet', href='fonts/flaticon/font/flaticon.css')
-    link(rel='stylesheet', href='css/aos.css')
+    //- link(rel='stylesheet', href='css/aos.css')
+    link(rel='stylesheet', href='css/our_team.css')
+    link(rel='stylesheet', href='css/about_us.css')
     // MAIN CSS
     link(rel='stylesheet', href='css/style.css')
 
     body
       block main
   
+    footer.site-footer
+            .container
+                .row
+                    .col-lg-3
+                        h2.footer-heading.mb-3 Hours
+                        p Weekdays:
+                            br 
+                            | Mon-Fri: 11:30 AM - 2:30 PM
+                            br
+                            br 
+                            | Weekends:
+                            br 
+                            | Sat: 9:30 PM - 4:30 PM
+                            br 
+                            
+                    .col-lg-8.ml-auto
+                        .row
+                            .col-lg-6.ml-auto
+                                h2.footer-heading.mb-4 Quick Links
+                                ul.list-unstyled
+                                    li
+                                        a(href='/about') About Us
+                                    li
+                                        a(href='/our-team') Testimonials
+                                    li
+                                        a(href='') Terms of Service
+                                    li
+                                        a(href='') Privacy
+                                    li
+                                        a(href='/contact') Contact Us
+                            .col-lg-6
+                                h2.footer-heading.mb-4 Connect
+                                .social_29128.white.mb-5
+                                    a(href='#')
+                                        span.icon-facebook
+                                    a(href='#')
+                                        span.icon-instagram
+                                    a(href='#')
+                                        span.icon-twitter
+                                //- h2.footer-heading.mb-4 Newsletter
+                                //- form.d-flex(action='#')
+                                //-     input.form-control.mr-3(type='text', placeholder='Email')
+                                //-     input.btn.btn-primary(type='submit', value='Send')
+                .row.pt-5.mt-5.text-center
+                    .col-md-12
+                        .border-top.pt-5
+                            p
+                                script.
+                                    document.write(new Date().getFullYear());
+                                i.icon-heart.text-danger(aria-hidden='true') 
+                                h5 TechDev.
     //- script(src="/js/jquery-3.2.1.min.js")
     script(src="/js/popper.min.js")
     script(src="/js/bootstrap.min.js")

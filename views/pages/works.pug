@@ -1,0 +1,105 @@
+extends ../layout
+
+block main
+    #home-section.site-wrap
+        .site-mobile-menu.site-navbar-target
+            .site-mobile-menu-header
+                .site-mobile-menu-close.mt-3
+                    span.icon-close2.js-menu-toggle
+            .site-mobile-menu-body
+        header.site-navbar.site-navbar-target(role='banner')
+            .container
+                .row.align-items-center.position-relative
+                    .col-3
+                        .site-logo
+                            a.font-weight-bold(href='/') TechDev.
+                    .col-9.text-right
+                        span.d-inline-block.d-lg-block
+                            a.text-white.site-menu-toggle.js-menu-toggle.py-5.text-white(href='#')
+                                span.icon-menu.h3.text-white
+                        nav.site-navigation.text-right.ml-auto.d-none.d-lg-none(role='navigation')
+                            ul.site-menu.main-menu.js-clone-nav.ml-auto
+                                li
+                                    a.nav-link(href='/') Home
+                                li
+                                    a.nav-link(href='/about') About
+                                li.active
+                                    a.nav-link(href='/works') Works
+                                li
+                                    a.nav-link(href='/journal') Journal
+                                li
+                                    a.nav-link(href='/contact') Contact
+        .ftco-blocks-cover-1
+            .site-section-cover.overlay(style="background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')")
+                .container
+                    .row.align-items-center.justify-content-center
+                        .col-md-7.text-center
+                            h1.mb-4.text-white Our Works
+                            p.mb-4
+        .site-section
+            .container
+                .row.mb-5
+                    .col-md-7.mx-auto.text-center
+                        h2.heading-29190 Selected Projects
+                .row
+                    .col-md-6.col-lg-4.mb-4
+                        .item.web
+                            a.item-wrap(href='/about-signup', data-fancybox='gal')
+                                span.icon-add
+                                    h5 Try
+                                img.img-fluid(src='/img/product1.png')
+                    .col-md-6.col-lg-4.mb-4
+                        .item.web
+                            a.item-wrap(href='/about-login', data-fancybox='gal')
+                                span.icon-add
+                                    h5 Try
+                                img.img-fluid(src='/img/product2.png')
+                    .col-md-6.col-lg-4.mb-4
+                        .item.web
+                            a.item-wrap(href='', data-fancybox='gal')
+                                span.icon-add
+                                    h5 Try
+                                img.img-fluid(src='http://intaward.org.mt/wp-content/uploads/2014/03/under_construction.jpg')
+        // END .site-section
+        .site-section.bg-light
+            .container
+                .row.mb-5
+                    .col-md-7.mx-auto.text-center
+                        h2.heading-29190 Testimonials
+                .row
+                    .col-lg-4.col-md-6
+                        div
+                            .person-pic-39219.mb-4
+                                img.img-fluid(src='images/person_1.jpg', alt='Image')
+                            blockquote.quote_39823
+                                p
+                            p &mdash; Chris Smith
+                    .col-lg-4.col-md-6
+                        div
+                            .person-pic-39219.mb-4
+                                img.img-fluid(src='images/person_2.jpg', alt='Image')
+                            blockquote.quote_39823
+                                p
+                            p &mdash; Chris Smith
+                    .col-lg-4.col-md-6
+                        div
+                            .person-pic-39219.mb-4
+                                img.img-fluid(src='images/person_3.jpg', alt='Image')
+                            blockquote.quote_39823
+                                p
+                            p &mdash; Chris Smith
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='js/jquery-migrate-3.0.0.js')
+    script(src='js/popper.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/owl.carousel.min.js')
+    script(src='js/aos.js')
+    script(src='js/main.js')
+    //- script(src='js/jquery.sticky.js')
+    //- script(src='js/jquery.waypoints.min.js')
+    //- script(src='js/jquery.animateNumber.min.js')
+    //- script(src='js/jquery.fancybox.min.js')
+    //- script(src='js/jquery.stellar.min.js')
+    //- script(src='js/jquery.easing.1.3.js')
+    //- script(src='js/bootstrap-datepicker.min.js')
+    //- script(src='js/isotope.pkgd.min.js')
