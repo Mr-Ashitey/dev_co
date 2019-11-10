@@ -1,3 +1,5 @@
+* { font-family: Arial }
+
 /* @extend display-flex; */
 display-flex, .display-flex, .display-flex-center, .signup-content, .signin-content, .social-login, .socials {
   display: flex;
@@ -11,10 +13,10 @@ list-type-ulli, .socials {
 
 /* poppins-300 - latin */
 @font-face {
-  font-family: 'Poppins';
+  font-family: 'Poppins' !important;
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/poppins/poppins-v5-latin-300.eot");
+  src: url("../fonts old/poppins/poppins-v5-latin-300.eot") !important;
   /* IE9 Compat Modes */
   src: local("Poppins Light"), local("Poppins-Light"), url("../fonts/poppins/poppins-v5-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/poppins-v5-latin-300.woff2") format("woff2"), url("../fonts/poppins/poppins-v5-latin-300.woff") format("woff"), url("../fonts/poppins/poppins-v5-latin-300.ttf") format("truetype"), url("../fonts/poppins/poppins-v5-latin-300.svg#Poppins") format("svg");
   /* Legacy iOS */ }

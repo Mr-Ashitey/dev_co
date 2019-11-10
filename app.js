@@ -17,7 +17,9 @@ const db = require('./config/database');
 //CONNECT TO MONGOOSE
 mongoose
   .connect(db.mongoURI, {
-    autoReconnect: true
+    useNewUrlParser: true,
+    autoReconnect: true,
+    //  useUnifiedTopology: true
   })
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
@@ -44,8 +46,8 @@ app.set("views", "views");
 app.use(express.static(path.join(__dirname, "public")));
 
 //Use routes
-app.use(require("./routes/WorksRoute"));
 app.use(require("./routes/PagesRoute"));
+app.use("/works", require("./routes/WorksRoute"));
 // app.use(require("./routes/routes"));
 
 //404 handler

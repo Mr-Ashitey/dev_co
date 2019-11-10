@@ -13,16 +13,4 @@ router.get("/contact", (req, res) => {
   res.render("pages/contact");
 });
 
-router.get("/works", (req, res) => {
-  res.render("pages/works");
-});
-
-router.get("/about-login", (req, res) => {
-  res.render("works/login/about-login");
-});
-
-router.get("/about-signup", (req, res) => {
-  res.render("works/signup/about-signup");
-});
-
 module.exports = router;

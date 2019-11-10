@@ -21,6 +21,18 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+router.get("/", (req, res) => {
+  res.render("pages/works");
+});
+
+router.get("/about-login", (req, res) => {
+  res.render("works/login/about-login");
+});
+
+router.get("/about-signup", (req, res) => {
+  res.render("works/signup/about-signup");
+});
+
 //render signup page
 router.get("/signup", (req, res) => {
   res.render("works/signup/signup");
@@ -30,37 +42,37 @@ router.get("/signup", (req, res) => {
 router.post("/signup", async (req, res) => {
   try{
     const { name, email, password, confirmPassword } = req.body;
-
-  //all fields required
-  if (
-    !name.trim() ||
-    !email.trim() ||
-    !password.trim() ||
-    !confirmPassword.trim()
-  ) {
-    return console.log("All fields required");
-  }
-
-  //check password length
-  if (password.trim().length < 4) {
-    return console.log("password length is less than 4");
-  }
-
-  //if passwords do not match return an error alert
-  if (password.trim() !== confirmPassword.trim()) {
-    return console.log("passwords do not match");
-  }
-
-  //find a User by email
-  const foundUser = await Users.findOne({ email });
-  //if User already exists return error alert
-  if (foundUser) {
-    return res.render("works/signup/signup", {
-      alertTitle: "Signup Error",
-      alertMessage: `The email "${email}" already exists`,
-      alertType: "error"
-    });
-  }
+    
+    //all fields required
+    if (
+      !name.trim() ||
+      !email.trim() ||
+      !password.trim() ||
+      !confirmPassword.trim()
+      ) {
+        return console.log("All fields required");
+      }
+      
+      //check password length
+      if (password.trim().length < 4) {
+        return console.log("password length is less than 4");
+      }
+      
+      //if passwords do not match return an error alert
+      if (password.trim() !== confirmPassword.trim()) {
+        return console.log("passwords do not match");
+      }
+      
+      //find a User by email
+      const foundUser = await Users.findOne({ email });
+      //if User already exists return error alert
+      if (foundUser) {
+        return res.render("works/signup/signup", {
+          alertTitle: "Signup Error",
+          alertMessage: `The email "${email}" already exists`,
+          alertType: "error"
+        });
+      }
 
   //encrypt the password
   const hash = await bcrypt.hashSync(password, 10);

@@ -26,11 +26,9 @@ block main
                                 li.active
                                     a.nav-link(href='/work') Works
                                 li
-                                    a.nav-link(href='/journal') Journal
-                                li
                                     a.nav-link(href='/contact') Contact
         .ftco-blocks-cover-1
-            .site-section-cover.overlay(style="background-image: url('img/product2.png')")
+            .site-section-cover.overlay(style="background-image: url('/img/product2.png')")
                 .container
                     .row.align-items-center.justify-content-center
                         .col-md-7.text-center
@@ -40,9 +38,9 @@ block main
             .container
                 .row.justify-content-between.mb-5
                     .col-md-6
-                        img.img-fluid(src='img/product2.png', alt='Image', style="border-color: #108d6f; border-width: 2px; border-style: solid;")
+                        img.img-fluid(src='/img/product2.png', alt='Image', style="border-color: #108d6f; border-width: 2px; border-style: solid;")
                     .col-md-6
-                        img.img-fluid(src='img/product2.png', alt='Image', style="border-color: #108d6f; border-width: 2px; border-style: solid;")
+                        img.img-fluid(src='/img/product2.png', alt='Image', style="border-color: #108d6f; border-width: 2px; border-style: solid;")
                 .row
                     .col-md-8
                         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum commodi ratione voluptates tempore minus eius, possimus. Necessitatibus incidunt accusantium vitae libero, quod blanditiis esse est rerum inventore iure, obcaecati maiores.
@@ -63,7 +61,7 @@ block main
                         .mb-4
                             strong.text-black.font-weight-bold Website:
                             p
-                                a(href='/login') https://techdev.herokuapp/works/login
+                                a(href='/works/login') https://techdev.herokuapp/works/login
         .site-section
             .container
                 .row.mb-5
@@ -72,9 +70,9 @@ block main
                 .row
                     .col-md-6.col-lg-4.mb-4
                         .item.web
-                            a.item-wrap(href='/about-signup', data-fancybox='gal')
+                            a.item-wrap(href='/works/about-signup', data-fancybox='gal')
                                 span.icon-add
-                                img.img-fluid(src='img/product1.png')
+                                img.img-fluid(src='/img/product1.png')
                     .col-md-6.col-lg-4.mb-4
                         .item.web
                             a.item-wrap(href='', data-fancybox='gal')
@@ -90,30 +88,30 @@ block main
                     .col-lg-4.col-md-6
                         div
                             .person-pic-39219.mb-4
-                                img.img-fluid(src='images/person_1.jpg', alt='Image')
+                                img.img-fluid(src='/images/person_1.jpg', alt='Image')
                             blockquote.quote_39823
                                 p
                             p &mdash; Chris Smith
                     .col-lg-4.col-md-6
                         div
                             .person-pic-39219.mb-4
-                                img.img-fluid(src='images/person_2.jpg', alt='Image')
+                                img.img-fluid(src='/images/person_2.jpg', alt='Image')
                             blockquote.quote_39823
                                 p
                             p &mdash; Chris Smith
                     .col-lg-4.col-md-6
                         div
                             .person-pic-39219.mb-4
-                                img.img-fluid(src='images/person_3.jpg', alt='Image')
+                                img.img-fluid(src='/images/person_3.jpg', alt='Image')
                             blockquote.quote_39823
                                 p
                             p &mdash; Chris Smith
-    script(src='js/jquery-3.3.1.min.js')
-    script(src='js/jquery-migrate-3.0.0.js')
-    script(src='js/popper.min.js')
-    script(src='js/bootstrap.min.js')
-    script(src='js/aos.js')
-    script(src='js/main.js')
+    script(src='/js/jquery-3.3.1.min.js')
+    script(src='/js/popper.min.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/owl.carousel.min.js')
+    script(src='/js/aos.js')
+    script(src='/js/main.js')
     //- script(src='js/owl.carousel.min.js')
     //- script(src='js/jquery.sticky.js')
     //- script(src='js/jquery.waypoints.min.js')

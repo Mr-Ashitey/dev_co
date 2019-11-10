@@ -4,26 +4,25 @@ html(lang="en")
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Finished Products
-    link(rel='icon', type='image/png', href='/img/dev_co.png')
+    link(rel='icon', type='image/png', href='/img/techdev.png')
     // CSS Files
-    link(href='OLD UI USABLES/css/bootstrap.min.css', rel='stylesheet')
-    link(rel='stylesheet', href='fonts old/material-icon/css/material-design-iconic-font.min.css')
-    link(rel='stylesheet', type='text/css', href='fonts/font-awesome-4.7.0/css/font-awesome.min.css')
-    link(href='OLD UI USABLES/css/style.css', rel='stylesheet')
+    link(href='/OLD UI USABLES/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/fonts old/material-icon/css/material-design-iconic-font.min.css')
+    link(rel='stylesheet', type='text/css', href='/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+    link(href='/OLD UI USABLES/css/style.css', rel='stylesheet')
     //- link(href='/css/main.css', rel='stylesheet')
-    link(rel="stylesheet", href="OLD UI USABLES/css/sweetalert2.min.css")
-    script(src="OLD UI USABLES/css/sweetalert2.min.js")
+    link(rel="stylesheet", href="/OLD UI USABLES/css/sweetalert2.min.css")
+    script(src="/OLD UI USABLES/css/sweetalert2.min.js")
     //- script(src="/js/sweetalert.min.js")
     body
         .main
             nav.navbar.navbar-default
                     .container-fluid
-                        .navbar-header(style='padding-left: 10px')
-                            a(href='/')
+                        .navbar-header
+                            a(href='/works/about-login')
                                 button.btn.btn-secondary.btn-lg.navbar-btn.pull-left
-                                    span.i.zmdi.zmdi-home
+                                    span.i.zmdi.zmdi-arrow-left
                             .navbar-text.navbar-brand-centered
-                                h5 Go Back
             // Sign in  Form
             section.sign-in
                 .container
@@ -31,7 +30,7 @@ html(lang="en")
                         .signin-image
                             figure
                                 img(src='../img/signin-image.jpg', alt='sign up image')
-                            a.signup-image-link(href='/signup') Create an account
+                            a.signup-image-link(href='/works/signup') Create an account
                         .signin-form
                             h2.form-title#data(data-message=alertMessage data-title=alertTitle data-type=alertType data-timer=alertTimer) Sign in
                             form#login-form.register-form.validate-form(method='POST')
@@ -72,22 +71,22 @@ html(lang="en")
                                 //- each user, index in Users
                                 .form-group.form-button
                                     input#signin.form-submit(type='submit', name='signin', value='Log in')
-                            .social-login
-                                span.social-label Or login with
-                                ul.socials
-                                    li
-                                        a(href='#')
-                                            i.display-flex-center.zmdi.zmdi-facebook
-                                    li
-                                        a(href='#')
-                                            i.display-flex-center.zmdi.zmdi-twitter
-                                    li
-                                        a(href='#')
-                                            i.display-flex-center.zmdi.zmdi-google
-    script(src='OLD UI USABLES/js/jquery-3.2.1.min.js')
-    script(src='OLD UI USABLES/js/validate.js')
-    script(src="OLD UI USABLES/js/popper.min.js")
-    script(src="OLD UI USABLES/js/bootstrap.min.js")
+                            //- .social-login
+                            //-     span.social-label Or login with
+                            //-     ul.socials
+                            //-         li
+                            //-             a(href='#')
+                            //-                 i.display-flex-center.zmdi.zmdi-facebook
+                            //-         li
+                            //-             a(href='#')
+                            //-                 i.display-flex-center.zmdi.zmdi-twitter
+                            //-         li
+                            //-             a(href='#')
+                            //-                 i.display-flex-center.zmdi.zmdi-google
+    script(src='/OLD UI USABLES/js/jquery-3.2.1.min.js')
+    script(src='/OLD UI USABLES/js/validate.js')
+    script(src="/OLD UI USABLES/js/popper.min.js")
+    script(src="/OLD UI USABLES/js/bootstrap.min.js")
     //- script(src='/js/validate2.js')
     //- script.
     //-     window.onload = function() {
